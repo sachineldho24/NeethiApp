@@ -1,0 +1,33 @@
+# Model Configuration for Neethi App
+# This file contains paths and parameters for all ML models
+
+# Embedding Model (for retrieval)
+embedding:
+  model_name: "law-ai/InLegalBERT"
+  model_path: "models/inlegalbert/"
+  max_seq_length: 512
+  embedding_dim: 768
+  device: "cuda"  # or "cpu" for local dev
+  batch_size: 32
+
+# Generation Model (for advice)
+generation:
+  model_name: "meta-llama/Meta-Llama-3-8B-Instruct"
+  model_path: "models/llama3-legal-4bit/"
+  quantization: "4bit"  # Options: "4bit", "8bit", "none"
+  max_new_tokens: 800
+  temperature: 0.3
+  top_p: 0.9
+  device: "cuda"
+  
+# Re-ranker Model (for result refinement)
+reranker:
+  model_name: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  model_path: "models/reranker/"
+  top_k: 5  # Final number of results after re-ranking
+
+# Inference Settings
+inference:
+  use_flash_attention: true
+  torch_dtype: "float16"
+  low_cpu_mem_usage: true

@@ -1,0 +1,150 @@
+{
+  "run_timestamp": "2025-12-12T06:04:58.254557",
+  "api_url": "http://localhost:8000/api/v1/query",
+  "total_queries": 10,
+  "successful": 10,
+  "failed": 0,
+  "total_time_ms": 4229.795694351196,
+  "results": [
+    {
+      "id": 1,
+      "category": "theft",
+      "query": "What is the punishment for theft?",
+      "status": "success",
+      "response_time_ms": 1794.04,
+      "sources_found": 5,
+      "top_sections": [
+        "IPC IPC378",
+        "BNS 303",
+        "IPC IPC380"
+      ],
+      "advice_preview": "Based on your query, here are the most relevant legal provisions:\n\n**1. IPC Section IPC378** (Relevance: 80%)\nIPC Section IPC378: Description of IPC Section 378\nAccording to section 378 of Indian pena..."
+    },
+    {
+      "id": 2,
+      "category": "murder",
+      "query": "What is murder under IPC Section 302?",
+      "status": "success",
+      "response_time_ms": 276.5,
+      "sources_found": 5,
+      "top_sections": [
+        "IPC IPC302",
+        "BNS 302",
+        "IPC IPC300"
+      ],
+      "advice_preview": "Based on your query, here are the most relevant legal provisions:\n\n**1. IPC Section IPC302** (Relevance: 80%)\nIPC Section IPC302: Description of IPC Section 302\nAccording to section 302 of Indian pena..."
+    },
+    {
+      "id": 3,
+      "category": "assault",
+      "query": "What is the punishment for assault and hurt?",
+      "status": "success",
+      "response_time_ms": 280.84,
+      "sources_found": 5,
+      "top_sections": [
+        "IPC IPC300",
+        "BNS 101",
+        "IPC IPC326A"
+      ],
+      "advice_preview": "Based on your query, here are the most relevant legal provisions:\n\n**1. IPC Section IPC300** (Relevance: 80%)\nIPC Section IPC300: Description of IPC Section 300\nAccording to section 300 of Indian pena..."
+    },
+    {
+      "id": 4,
+      "category": "fraud",
+      "query": "What is cheating and fraud under Indian law?",
+      "status": "success",
+      "response_time_ms": 312.0,
+      "sources_found": 5,
+      "top_sections": [
+        "IPC IPC420",
+        "IPC IPC415",
+        "BNS 318"
+      ],
+      "advice_preview": "Based on your query, here are the most relevant legal provisions:\n\n**1. IPC Section IPC420** (Relevance: 80%)\nIPC Section IPC420: Description of IPC Section 420\nAccording to section 420 of Indian pena..."
+    },
+    {
+      "id": 5,
+      "category": "dowry",
+      "query": "What are the laws against dowry harassment?",
+      "status": "success",
+      "response_time_ms": 250.9,
+      "sources_found": 5,
+      "top_sections": [
+        "IPC IPC304B",
+        "BNS 80",
+        "BNS 86"
+      ],
+      "advice_preview": "Based on your query, here are the most relevant legal provisions:\n\n**1. IPC Section IPC304B** (Relevance: 80%)\nIPC Section IPC304B: Description of IPC Section 304B\nAccording to section 304B of Indian ..."
+    },
+    {
+      "id": 6,
+      "category": "kidnapping",
+      "query": "What is kidnapping and abduction punishment?",
+      "status": "success",
+      "response_time_ms": 262.23,
+      "sources_found": 5,
+      "top_sections": [
+        "IPC IPC364A",
+        "IPC IPC364",
+        "IPC IPC368"
+      ],
+      "advice_preview": "Based on your query, here are the most relevant legal provisions:\n\n**1. IPC Section IPC364A** (Relevance: 80%)\nIPC Section IPC364A: Description of IPC Section 364A\nAccording to section 364A of Indian ..."
+    },
+    {
+      "id": 7,
+      "category": "defamation",
+      "query": "What is defamation under IPC?",
+      "status": "success",
+      "response_time_ms": 257.95,
+      "sources_found": 5,
+      "top_sections": [
+        "IPC IPC499",
+        "IPC IPC500",
+        "BNS 351"
+      ],
+      "advice_preview": "Based on your query, here are the most relevant legal provisions:\n\n**1. IPC Section IPC499** (Relevance: 80%)\nIPC Section IPC499: Description of IPC Section 499\nAccording to section 499 of Indian pena..."
+    },
+    {
+      "id": 8,
+      "category": "robbery",
+      "query": "What is the difference between theft and robbery?",
+      "status": "success",
+      "response_time_ms": 277.63,
+      "sources_found": 5,
+      "top_sections": [
+        "BNS 317",
+        "IPC IPC378",
+        "IPC IPC390"
+      ],
+      "advice_preview": "Based on your query, here are the most relevant legal provisions:\n\n**1. BNS Section 317** (Relevance: 80%)\nBNS Section 317: (1) Property, the possession whereof has been transferred by theft or extort..."
+    },
+    {
+      "id": 9,
+      "category": "bail",
+      "query": "Which offenses are bailable under IPC?",
+      "status": "success",
+      "response_time_ms": 252.02,
+      "sources_found": 5,
+      "top_sections": [
+        "IPC IPC205",
+        "IPC IPC229A",
+        "IPC IPC300"
+      ],
+      "advice_preview": "Based on your query, here are the most relevant legal provisions:\n\n**1. IPC Section IPC205** (Relevance: 80%)\nIPC Section IPC205: Description of IPC Section 205\nAccording to section 205 of Indian pena..."
+    },
+    {
+      "id": 10,
+      "category": "general",
+      "query": "What is Section 420 of IPC about?",
+      "status": "success",
+      "response_time_ms": 265.69,
+      "sources_found": 5,
+      "top_sections": [
+        "IPC IPC420",
+        "IPC IPC415",
+        "BNS 318"
+      ],
+      "advice_preview": "Based on your query, here are the most relevant legal provisions:\n\n**1. IPC Section IPC420** (Relevance: 80%)\nIPC Section IPC420: Description of IPC Section 420\nAccording to section 420 of Indian pena..."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+# API Configuration for Neethi App
+
+api:
+  title: "Neethi Legal Assistant API"
+  description: "AI-powered legal guidance for Indian citizens"
+  version: "1.0.0"
+  
+  # Server settings
+  host: "0.0.0.0"
+  port: 8000
+  debug: false
+  reload: true  # Set to false in production
+  
+  # CORS settings
+  cors:
+    allow_origins:
+      - "http://localhost:3000"
+      - "http://localhost:8080"
+    allow_methods: ["GET", "POST", "OPTIONS"]
+    allow_headers: ["*"]
+  
+  # Rate limiting
+  rate_limit:
+    enabled: true
+    requests_per_minute: 60
+    requests_per_hour: 500
+  
+  # Response settings
+  response:
+    max_sources: 5  # Maximum legal sources to cite
+    include_disclaimer: true
+    
+# External APIs
+external:
+  # Google Maps (for location services)
+  google_maps:
+    api_key: "${GOOGLE_MAPS_API_KEY}"
+    search_radius_km: 5
+    max_results: 5
+    
+  # News RSS Feeds
+  news_feeds:
+    - name: "LiveLaw"
+      url: "https://www.livelaw.in/rss/feed"
+    - name: "Bar and Bench"
+      url: "https://www.barandbench.com/feed"
+    - name: "Indian Kanoon"
+      url: "https://indiankanoon.org/feeds/latest/"
+  
+  # Update frequency (hours)
+  news_update_interval: 6
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}"
+  file: "logs/api.log"
+  rotation: "10 MB"
+  retention: "7 days"

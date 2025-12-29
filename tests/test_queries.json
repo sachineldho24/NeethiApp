@@ -1,0 +1,54 @@
+{
+    "test_queries": [
+        {
+            "id": 1,
+            "category": "theft",
+            "query": "What is the punishment for theft?"
+        },
+        {
+            "id": 2,
+            "category": "murder",
+            "query": "What is murder under IPC Section 302?"
+        },
+        {
+            "id": 3,
+            "category": "assault",
+            "query": "What is the punishment for assault and hurt?"
+        },
+        {
+            "id": 4,
+            "category": "fraud",
+            "query": "What is cheating and fraud under Indian law?"
+        },
+        {
+            "id": 5,
+            "category": "dowry",
+            "query": "What are the laws against dowry harassment?"
+        },
+        {
+            "id": 6,
+            "category": "kidnapping",
+            "query": "What is kidnapping and abduction punishment?"
+        },
+        {
+            "id": 7,
+            "category": "defamation",
+            "query": "What is defamation under IPC?"
+        },
+        {
+            "id": 8,
+            "category": "robbery",
+            "query": "What is the difference between theft and robbery?"
+        },
+        {
+            "id": 9,
+            "category": "bail",
+            "query": "Which offenses are bailable under IPC?"
+        },
+        {
+            "id": 10,
+            "category": "general",
+            "query": "What is Section 420 of IPC about?"
+        }
+    ]
+}

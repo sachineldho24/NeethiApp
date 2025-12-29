@@ -1,0 +1,80 @@
+{
+  "timestamp": "2025-12-29 13:44:35",
+  "base_url": "http://localhost:8000",
+  "total_queries": 10,
+  "successful": 10,
+  "failed": 0,
+  "total_time_s": 46.19117975234985,
+  "results": [
+    {
+      "id": 1,
+      "category": "theft",
+      "status": "success",
+      "time_s": 2.6465001106262207,
+      "sources": 3
+    },
+    {
+      "id": 2,
+      "category": "murder",
+      "status": "success",
+      "time_s": 1.4739320278167725,
+      "sources": 3
+    },
+    {
+      "id": 3,
+      "category": "assault",
+      "status": "success",
+      "time_s": 2.4633982181549072,
+      "sources": 3
+    },
+    {
+      "id": 4,
+      "category": "fraud",
+      "status": "success",
+      "time_s": 3.661099672317505,
+      "sources": 3
+    },
+    {
+      "id": 5,
+      "category": "dowry",
+      "status": "success",
+      "time_s": 2.2323784828186035,
+      "sources": 3
+    },
+    {
+      "id": 6,
+      "category": "kidnapping",
+      "status": "success",
+      "time_s": 4.944128036499023,
+      "sources": 3
+    },
+    {
+      "id": 7,
+      "category": "defamation",
+      "status": "success",
+      "time_s": 4.219146728515625,
+      "sources": 3
+    },
+    {
+      "id": 8,
+      "category": "robbery",
+      "status": "success",
+      "time_s": 8.049161434173584,
+      "sources": 3
+    },
+    {
+      "id": 9,
+      "category": "bail",
+      "status": "success",
+      "time_s": 6.525553941726685,
+      "sources": 3
+    },
+    {
+      "id": 10,
+      "category": "general",
+      "status": "success",
+      "time_s": 9.975881099700928,
+      "sources": 3
+    }
+  ]
+}

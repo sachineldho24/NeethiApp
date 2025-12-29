@@ -1,0 +1,40 @@
+# Qdrant Vector Database Configuration
+# Replace with your Qdrant Cloud credentials
+
+qdrant:
+  # Use Qdrant Cloud (recommended for student projects)
+  url: "${QDRANT_URL}"  # e.g., "https://your-cluster-id.qdrant.io"
+  api_key: "${QDRANT_API_KEY}"
+  
+  # Collection settings
+  collection_name: "neethi-legal-kb"
+  
+  # Vector configuration
+  vector_size: 768  # InLegalBERT embedding dimension
+  distance_metric: "Cosine"  # Options: "Cosine", "Euclid", "Dot"
+  
+  # HNSW Index settings (for fast search)
+  hnsw:
+    m: 16  # Number of connections per layer
+    ef_construct: 100  # Construction time/quality trade-off
+    ef_search: 128  # Search time/quality trade-off
+  
+  # Search settings
+  search:
+    top_k: 20  # Initial retrieval count
+    score_threshold: 0.5  # Minimum similarity score
+    
+  # Payload filtering
+  filters:
+    enabled: true
+    indexed_fields:
+      - "law_type"
+      - "section_num"
+      - "case_type"
+
+# Local development alternative (Docker)
+# Uncomment below if using local Docker instead of cloud
+# local:
+#   host: "localhost"
+#   port: 6333
+#   grpc_port: 6334
