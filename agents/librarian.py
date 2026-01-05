@@ -13,6 +13,9 @@ from pathlib import Path
 import json
 import re
 
+# For base model loading (SC judgments)
+from sentence_transformers import SentenceTransformer
+
 
 # ================== Load IPC-BNS Mapping ==================
 def _load_ipc_bns_mapping() -> Dict[str, Dict[str, List[str]]]:
@@ -90,6 +93,9 @@ class LibrarianAgent:
     BAIL_COLLECTION = "neethi-bail-judgments"
     SC_COLLECTION = "neethi-judgments"
     
+    # Base model for SC judgments (must match what was used during ingestion)
+    SC_BASE_MODEL = "law-ai/InLegalBERT"
+    
     def __init__(
         self,
         qdrant_client,
@@ -98,9 +104,22 @@ class LibrarianAgent:
         top_k: int = 5
     ):
         self.qdrant = qdrant_client
-        self.embedder = embedding_model
+        self.embedder = embedding_model  # Fine-tuned model for statutes/bail
         self.collection = collection_name
         self.top_k = top_k
+        self._sc_embedder = None  # Lazy-loaded base model for SC judgments
+    
+    @property
+    def sc_embedder(self):
+        """Lazy load base InLegalBERT for SC judgment retrieval.
+        
+        SC judgments were indexed with base model, so we need matching embeddings.
+        """
+        if self._sc_embedder is None:
+            logger.info(f"Loading base model for SC judgments: {self.SC_BASE_MODEL}")
+            self._sc_embedder = SentenceTransformer(self.SC_BASE_MODEL)
+            logger.info("✅ Base InLegalBERT loaded for SC judgment retrieval")
+        return self._sc_embedder
     
     def _detect_categories(self, query: str) -> Tuple[List[str], List[str], List[str]]:
         """
@@ -484,11 +503,16 @@ class LibrarianAgent:
         return merged
     
     def _search_sc_judgments(self, query: str, limit: int = 5) -> List[RetrievedChunk]:
-        """Search SC Judgments collection and return relevant case details"""
+        """Search SC Judgments collection using BASE model (matches ingestion).
+        
+        Note: SC judgments were indexed with base InLegalBERT, not fine-tuned.
+        Using fine-tuned embedder here would cause vector space mismatch.
+        """
         if not self._collection_exists(self.SC_COLLECTION):
             return []
         
-        query_embedding = self.embedder.encode(query).tolist()
+        # Use BASE model for SC judgments (matches ingestion model)
+        query_embedding = self.sc_embedder.encode(query).tolist()
         
         results = self.qdrant.query_points(
             collection_name=self.SC_COLLECTION,
